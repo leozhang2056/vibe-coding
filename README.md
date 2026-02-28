@@ -17,23 +17,12 @@ git clone https://github.com/leozhang2056/vibe-coding.git
 cd vibe-coding
 ```
 
-### 2. 项目初始化
+### 2. 让 AI 读取
 
-开始新项目前，让 AI 读取本项目：
+开始新项目前：
 
 ```
 请先阅读 /path/to/vibe-coding/ 项目，理解编程约束和风格指南。
-```
-
-### 3. 编码约束
-
-编码时提醒 AI：
-
-```
-按照 vibe-coding 中的规范编写代码：
-- 使用 Python/JavaScript 目录下的风格指南
-- 遵循 common/principles/ 中的 SOLID 原则
-- 避免 common/anti-patterns/ 中的反模式
 ```
 
 ---
@@ -42,37 +31,33 @@ cd vibe-coding
 
 ```
 vibe-coding/
-├── common/                 # 通用原则（语言无关）
-│   ├── principles/        # 核心原则
-│   │   ├── SOLID.md              # 单一职责、开闭原则等
-│   │   ├── CLEAN_CODE.md         # 代码整洁之道
-│   │   └── CLEAN_ARCHITECTURE.md # 简洁架构
-│   ├── patterns/          # 设计模式
-│   └── anti-patterns/     # 反模式
+├── common/                    # 通用原则（语言无关）
+│   ├── principles/           # 核心原则
+│   │   ├── SOLID.md               # 单一职责、开闭原则等
+│   │   ├── CLEAN_CODE.md          # 代码整洁之道
+│   │   ├── CLEAN_ARCHITECTURE.md  # 简洁架构
+│   │   └── DRY_KISS_YAGNI.md      # DRY、KISS、YAGNI 原则
+│   ├── patterns/             # 设计模式
+│   │   └── DESIGN_PATTERNS.md     # 工厂、策略、观察者等
+│   └── anti-patterns/        # 反模式
+│       └── ANTI_PATTERNS.md       # 魔法数字、嵌套地狱等
 │
-├── languages/             # 语言特定规范
-│   ├── python/           # Python 规范
+├── languages/                 # 语言特定规范
+│   ├── python/               # Python 规范
 │   │   └── STYLE.md              # PEP 8、Pythonic 写法
-│   ├── javascript/       # JavaScript 规范
+│   ├── javascript/           # JavaScript 规范
 │   │   └── STYLE.md              # ES6+、Airbnb 风格
-│   ├── go/               # Go 规范
-│   └── rust/             # Rust 规范
+│   ├── go/                   # Go 规范（即将添加）
+│   └── rust/                 # Rust 规范（即将添加）
 │
-└── templates/            # 项目模板
+└── templates/                # 项目模板（即将添加）
 ```
 
 ---
 
-## 核心理念
+## 核心原则
 
-基于以下经典著作：
-
-- **Clean Code** (代码整洁之道) - Robert C. Martin
-- **Clean Architecture** (简洁架构) - Robert C. Martin
-- **The Pragmatic Programmer** (程序员的职业素养) - David Thomas
-- **Design Patterns** (设计模式) - GoF
-
-### 1. SOLID 原则
+### SOLID 原则
 
 - **S**ingle Responsibility - 单一职责
 - **O**pen/Closed - 开闭原则
@@ -80,25 +65,25 @@ vibe-coding/
 - **I**nterface Segregation - 接口隔离
 - **D**ependency Inversion - 依赖倒置
 
-### 2. Clean Code
+### Clean Code
 
 - 有意义的命名
 - 函数短小，只做一件事
-- 避免重复代码 (DRY)
+- 避免重复 (DRY)
 - 保持简单 (KISS)
-- 代码即文档，减少注释
+- 代码即文档
 
-### 3. Clean Architecture
+### Clean Architecture
 
-- 依赖规则：外层依赖内层
+- 依赖规则：外层 → 内层
 - 框架无关
 - 可测试
 - UI 无关
 
-### 4. 设计模式
+### 设计模式
 
 - 创建型：工厂、建造者、单例
-- 结构型：适配器、装饰器、代理
+- 结构型：适配器、装饰器
 - 行为型：策略、观察者、命令
 
 ---
@@ -132,10 +117,21 @@ vibe-coding/
 
 | 语言 | 状态 | 文档 |
 |------|------|------|
-| Python | ✅ | `languages/python/STYLE.md` |
-| JavaScript | ✅ | `languages/javascript/STYLE.md` |
-| Go | 🚧 | 即将添加 |
-| Rust | 🚧 | 即将添加 |
+| Python | ✅ 完成 | `languages/python/STYLE.md` |
+| JavaScript | ✅ 完成 | `languages/javascript/STYLE.md` |
+| Go | 🚧 计划中 | - |
+| Rust | 🚧 计划中 | - |
+
+---
+
+## 参考
+
+基于以下经典著作：
+
+- **Clean Code** - Robert C. Martin
+- **Clean Architecture** - Robert C. Martin
+- **The Pragmatic Programmer** - David Thomas
+- **Design Patterns** - GoF
 
 ---
 
