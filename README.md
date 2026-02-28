@@ -1,190 +1,287 @@
-# Vibe Coding - AI 编程约束系统
+# Vibe Coding - AI Programming Constraint System
 
-> 给 AI Agent 提供编程约束指导，确保代码风格可控、架构清晰。
+> Provide programming constraint guidance for AI Agents to ensure code style consistency and architectural clarity.
 
-## 项目目标
+[中文版](./README_CN.md) | English (Default)
 
-将编程最佳实践、架构原则、风格规范集中管理，让 AI 在编码前先读取本项目，确保输出符合高标准。
+## Project Goals
+
+Centralize best practices, architectural principles, and style guidelines to ensure AI produces high-quality code that meets standards before coding begins.
 
 ---
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-### 1. 克隆项目
+### 1. Clone the Project
 
 ```bash
 git clone https://github.com/leozhang2056/vibe-coding.git
 cd vibe-coding
 ```
 
-### 2. 让 AI 读取
+### 2. Let AI Read
 
-开始新项目前：
+Before starting a new project:
 
-```
-请先阅读 /path/to/vibe-coding/ 项目，理解编程约束和风格指南。
-```
+> Please read the /path/to/vibe-coding/ project first to understand the programming constraints and style guidelines.
 
 ---
 
-## 📚 文档结构
+## 📚 Document Structure
 
 ```
 vibe-coding/
-├── common/                    # 通用原则（语言无关）
-│   ├── principles/           # 核心原则
-│   │   ├── SOLID.md               # 单一职责、开闭原则等
-│   │   ├── CLEAN_CODE.md          # 代码整洁之道
-│   │   ├── CLEAN_ARCHITECTURE.md  # 简洁架构
-│   │   ├── DRY_KISS_YAGNI.md      # DRY、KISS、YAGNI 原则
-│   │   └── AI_PROGRAMMING.md      # AI 编程最佳实践
-│   ├── patterns/             # 设计模式
-│   │   └── DESIGN_PATTERNS.md     # 工厂、策略、观察者等
-│   ├── anti-patterns/        # 反模式
-│   │   └── ANTI_PATTERNS.md       # 魔法数字、嵌套地狱等
-│   ├── WORKFLOW.md            # Vibe Coding 工作流
-│   ├── TOOLS.md               # AI 编程工具推荐
-│   ├── PROJECT_STRUCTURE.md   # 项目组织结构
-│   ├── GETTING_STARTED.md     # 入门指南
-│   └── QUICK_REFERENCE.md     # 快速参考指南
+├── common/                    # Universal principles (language-agnostic)
+│   ├── principles/           # Core principles
+│   │   ├── SOLID.md               # Single responsibility, Open-closed, etc.
+│   │   ├── CLEAN_CODE.md          # Clean Code principles
+│   │   ├── CLEAN_ARCHITECTURE.md  # Clean Architecture
+│   │   ├── DRY_KISS_YAGNI.md      # DRY, KISS, YAGNI principles
+│   │   └── AI_PROGRAMMING.md      # AI Programming best practices
+│   ├── patterns/             # Design patterns
+│   │   └── DESIGN_PATTERNS.md     # Factory, Strategy, Observer, etc.
+│   ├── anti-patterns/        # Anti-patterns
+│   │   └── ANTI_PATTERNS.md       # Magic numbers, nested hell, etc.
+│   ├── WORKFLOW.md            # Vibe Coding workflow
+│   ├── TOOLS.md               # AI programming tools
+│   ├── PROJECT_STRUCTURE.md   # Project organization
+│   ├── GETTING_STARTED.md     # Getting started guide
+│   └── QUICK_REFERENCE.md     # Quick reference guide
 │
-├── languages/                 # 语言特定规范
-│   ├── python/               # Python 规范
-│   │   └── STYLE.md              # PEP 8、Pythonic 写法
-│   ├── javascript/           # JavaScript 规范
-│   │   └── STYLE.md              # ES6+、Airbnb 风格
-│   ├── go/                   # Go 规范（即将添加）
-│   └── rust/                 # Rust 规范（即将添加）
+├── languages/                 # Language-specific guides
+│   ├── python/               # Python
+│   │   ├── STYLE.md              # PEP 8, type hints, docstrings
+│   │   └── README.md
+│   ├── javascript/           # JavaScript
+│   │   ├── STYLE.md              # ESLint, async/await, FP
+│   │   └── README.md
+│   ├── java/                 # Java
+│   │   ├── ALIBABA_STANDARDS.md  # Alibaba Java standards (Taishan Edition)
+│   │   ├── DEVELOPMENT.md        # Development standards
+│   │   ├── UTILITIES.md          # Common utilities
+│   │   ├── CLAUDE.md             # AI prompt template
+│   │   └── README.md
+│   ├── android/             # Android (Kotlin)
+│   │   ├── ANDROID_PATTERNS.md   # Android patterns & best practices
+│   │   ├── ANDROID_DEVELOPMENT.md
+│   │   ├── CONFIGURATION.md
+│   │   ├── CLAUDE.md
+│   │   └── README.md
+│   ├── go/                   # Go (planned)
+│   └── rust/                 # Rust (planned)
 │
-└── templates/                # 项目模板（即将添加）
+└── README.md                 # This file
 ```
 
 ---
 
-## 📖 核心内容
+## 🎯 Core Features
 
-### 编程原则
+### 1. Hierarchical Structure
 
-| 原则 | 说明 | 文档 |
-|------|------|------|
-| **SOLID** | 单一职责、开闭、里氏替换、接口隔离、依赖倒置 | [SOLID.md](common/principles/SOLID.md) |
-| **Clean Code** | 代码整洁之道 | [CLEAN_CODE.md](common/principles/CLEAN_CODE.md) |
-| **Clean Architecture** | 简洁架构、依赖规则 | [CLEAN_ARCHITECTURE.md](common/principles/CLEAN_ARCHITECTURE.md) |
-| **DRY/KISS/YAGNI** | 不重复、保持简单、不做过度设计 | [DRY_KISS_YAGNI.md](common/principles/DRY_KISS_YAGNI.md) |
-| **AI 编程** | 与 AI 协作编程的最佳实践 | [AI_PROGRAMMING.md](common/principles/AI_PROGRAMMING.md) |
+- **Universal principles** at the root apply to all languages
+- **Language-specific rules** in subdirectories extend or override general rules
+- Clear inheritance relationship makes it easy to find relevant guidelines
 
-### 工作流与实践
+### 2. Industry Standards Integration
 
-| 内容 | 说明 | 文档 |
-|------|------|------|
-| **Vibe Coding 工作流** | 自然语言描述 → AI 生成 → 执行测试 → 反馈修正 | [WORKFLOW.md](common/WORKFLOW.md) |
-| **工具推荐** | Cursor、Copilot、Claude Code、Cline 等 | [TOOLS.md](common/TOOLS.md) |
-| **项目结构** | 目录组织、Makefile、Git 提交规范 | [PROJECT_STRUCTURE.md](common/PROJECT_STRUCTURE.md) |
-| **入门指南** | 从零到一，快速上手 AI 编程 | [GETTING_STARTED.md](common/GETTING_STARTED.md) |
-| **设计模式** | 工厂、策略、观察者、命令等 | [DESIGN_PATTERNS.md](common/patterns/DESIGN_PATTERNS.md) |
-| **反模式** | 魔法数字、嵌套地狱、过早优化等 | [ANTI_PATTERNS.md](common/anti-patterns/ANTI_PATTERNS.md) |
-| **快速参考** | 命名规范、错误处理、API 设计等 | [QUICK_REFERENCE.md](common/QUICK_REFERENCE.md) |
+- **Alibaba Java Development Manual** (Taishan Edition) - 13 core questions
+- **Clean Code** principles by Robert C. Martin
+- **SOLID** design principles
+- **DRY, KISS, YAGNI** practices
+- **Android Development Recipes** patterns
 
----
+### 3. Real Project Patterns
 
-## 🌐 语言支持
-
-| 语言 | 状态 | 文档 |
-|------|------|------|
-| Python | ✅ 完成 | [STYLE.md](languages/python/STYLE.md) |
-| JavaScript | ✅ 完成 | [STYLE.md](languages/javascript/STYLE.md) |
-| Go | 🚧 计划中 | - |
-| Rust | 🚧 计划中 | - |
+Extracted patterns from actual projects like:
+- AutoTask: Python + Playwright automation framework
+- Real-world Android applications
+- Enterprise Java applications
 
 ---
 
-## 💡 使用场景
+## 📖 How to Use
 
-### 场景 1：项目初始化
+### For AI Agents
 
-```
-你：我要开发一个 Python Web 应用，请先阅读 vibe-coding 项目，
-了解编码规范和架构原则，然后根据这些约束设计项目结构。
-```
-
-### 场景 2：编写代码
+When starting a new project:
 
 ```
-你：编写一个用户注册功能，按照 vibe-coding 中的 Python 规范，
-确保符合 SOLID 原则。
+Please read /root/.openclaw/workspace/vibe-coding/ first to understand:
+1. Universal programming principles (common/)
+2. Language-specific standards for [LANGUAGE] (languages/[LANGUAGE]/)
+3. Review the AI prompt template (languages/[LANGUAGE]/CLAUDE.md)
+
+Then follow the workflow (common/WORKFLOW.md) to begin development.
 ```
 
-### 场景 3：代码审查
+### For Developers
+
+**Quick Reference:**
+
+1. **New Project?** Read `common/GETTING_STARTED.md`
+2. **Language Guide?** Check `languages/[LANGUAGE]/README.md`
+3. **Style Issues?** See `common/principles/CLEAN_CODE.md`
+4. **Architecture?** Review `common/principles/CLEAN_ARCHITECTURE.md`
+5. **Design Patterns?** Reference `common/patterns/DESIGN_PATTERNS.md`
+
+**Recommended Reading Order:**
+
+1. `common/principles/AI_PROGRAMMING.md` - AI programming best practices
+2. `common/principles/SOLID.md` - Design principles
+3. `common/principles/CLEAN_CODE.md` - Code quality
+4. `languages/[LANGUAGE]/README.md` - Language specifics
+5. `languages/[LANGUAGE]/CLAUDE.md` - AI prompt template
+
+---
+
+## 🔧 Key Documents
+
+### Universal Principles
+
+| Document | Description | Status |
+|----------|-------------|--------|
+| [SOLID](./common/principles/SOLID.md) | Single responsibility, Open-closed, Liskov substitution, Interface segregation, Dependency inversion | ✅ Complete |
+| [CLEAN_CODE](./common/principles/CLEAN_CODE.md) | Meaningful names, functions, comments, error handling | ✅ Complete |
+| [CLEAN_ARCHITECTURE](./common/principles/CLEAN_ARCHITECTURE.md) | Dependency rules, entities, use cases, interfaces | ✅ Complete |
+| [DRY_KISS_YAGNI](./common/principles/DRY_KISS_YAGNI.md) | Don't repeat yourself, Keep it simple, You aren't gonna need it | ✅ Complete |
+| [AI_PROGRAMMING](./common/principles/AI_PROGRAMMING.md) | AI-specific best practices and patterns | ✅ Complete |
+
+### Language-Specific Guides
+
+| Language | Key Documents | Status |
+|----------|---------------|--------|
+| **Python** | [STYLE.md](./languages/python/STYLE.md) - PEP 8, type hints, docstrings | ✅ Complete |
+| **JavaScript** | [STYLE.md](./languages/javascript/STYLE.md) - ESLint, async/await, FP | ✅ Complete |
+| **Java** | [ALIBABA_STANDARDS.md](./languages/java/ALIBABA_STANDARDS.md) - Alibaba standards (Taishan Edition) | ✅ Complete |
+| **Android** | [ANDROID_PATTERNS.md](./languages/android/ANDROID_PATTERNS.md) - Android patterns & best practices | ✅ Complete |
+| **Go** | Planned | 🔜 Coming soon |
+| **Rust** | Planned | 🔜 Coming soon |
+
+---
+
+## 🌟 Highlights
+
+### Alibaba Java Standards (Taishan Edition)
+
+Based on the official Alibaba Java Development Manual, covering 13 core questions:
+
+- ✅ Ternary operator NPE issues
+- ✅ HashMap initialization best practices
+- ✅ Thread pool standards (avoid Executors)
+- ✅ String concatenation optimization
+- ✅ Date/Time handling (avoid static SimpleDateFormat)
+- ✅ Serialization guidelines (serialVersionUID)
+- ✅ Database standards (use COUNT(*))
+- ✅ Logging best practices (use SLF4J facade)
+
+### Android Development Patterns
+
+Based on "Android Development Recipes" (727 pages):
+
+- ✅ Component architecture (Activity, Service, Broadcast, ContentProvider)
+- ✅ Fragment usage patterns
+- ✅ UI patterns (custom windows, orientation, dialogs)
+- ✅ Multi-screen resolution adaptation
+- ✅ Data persistence (SharedPreferences, SQLite, Room)
+- ✅ Network programming (HttpURLConnection, Retrofit)
+- ✅ Performance optimization (memory leak prevention, ViewHolder)
+
+### Real Project Patterns
+
+Extracted from actual projects:
+
+- **AutoTask**: Python + Playwright automation framework patterns
+  - HTTP client abstraction
+  - Browser automation patterns
+  - Task scheduling and monitoring
+  - Notification systems
+
+---
+
+## 🤖 For AI Agents
+
+### Recommended Workflow
+
+1. **Read First**: Always read the project structure before coding
+2. **Follow Hierarchy**: Universal principles → Language rules → Project conventions
+3. **Use Templates**: Check `CLAUDE.md` for AI prompt templates
+4. **Verify**: Cross-reference against examples in real projects
+
+### Example Prompt
 
 ```
-你：根据 vibe-coding 的 Clean Code 标准审查以下代码，
-指出不符合规范的地方。
-```
+Before writing code, please:
+1. Read /root/.openclaw/workspace/vibe-coding/common/principles/
+2. Read /root/.openclaw/workspace/vibe-coding/languages/python/
+3. Review the AutoTask project patterns at /root/.openclaw/workspace/auto-reward/
+4. Apply these standards to the new code
 
-### 场景 4：选择工具
-
-```
-你：根据 vibe-coding 的工具推荐，选择适合我的 AI 编程工具。
-```
-
-### 场景 5：新手入门
-
-```
-你：我想学习 Vibe Coding，有什么推荐的入门路径吗？
+Follow the workflow in common/WORKFLOW.md and use the template in languages/python/CLAUDE.md
 ```
 
 ---
 
-## 📚 参考
+## 📊 Project Status
 
-基于以下经典著作和开源项目：
-
-### 书籍
-
-- **Clean Code** - Robert C. Martin
-- **Clean Architecture** - Robert C. Martin  
-- **The Pragmatic Programmer** - David Thomas
-- **Design Patterns** - GoF
-
-### 开源项目
-
-- [程序员鱼皮的 AI 资源大全](https://github.com/liyupi/ai-guide) ⭐ 8.2k
-- [Beginner's Vibe Coding Guide](https://github.com/wendy7756/vibe-coding-guide) ⭐ 53
-- [氛围编程（Vibe Coding）终极指南](https://github.com/zhanglunet/vibe-coding) ⭐ 34
-- [ref-vibecoding](https://github.com/kennyzhu2013/ref-vibecoding) ⭐ 0
-- [VibeVibe 繁體中文版](https://github.com/godmakereth/vibe-vibe-tw) ⭐ 45
-
-### 核心概念
-
-Vibe Coding 由 OpenAI 联合创始人 **Andrej Karpathy** 提出：
-
-> **"完全沉浸在 AI 的 vibe 中，用自然语言与 AI 对话，AI 生成代码，开发者通过迭代反馈进入心流状态。"**
+| Component | Status | Last Updated |
+|-----------|--------|--------------|
+| Universal principles | ✅ Complete | 2026-02-28 |
+| Python guide | ✅ Complete | 2026-02-28 |
+| JavaScript guide | ✅ Complete | 2026-02-28 |
+| Java guide | ✅ Complete + Alibaba standards | 2026-02-28 |
+| Android guide | ✅ Complete + Patterns | 2026-02-28 |
+| Go guide | 🔜 Planned | - |
+| Rust guide | 🔜 Planned | - |
 
 ---
 
-## 🤝 贡献
+## 🤝 Contributing
 
-欢迎补充：
+Contributions are welcome! Please:
 
-- 更多语言规范（Go、Rust、Java 等）
-- 设计模式示例
-- 最佳实践案例
-- 反模式案例
-- 项目模板
-- 工具推荐
+1. Fork the repository
+2. Create a feature branch
+3. Add or improve documentation
+4. Follow the existing style and structure
+5. Submit a pull request
 
----
-
-## 📄 License
-
-MIT
-
----
-
-## 🔗 GitHub
-
-https://github.com/leozhang2056/vibe-coding
+**Guidelines:**
+- Keep language-specific rules in `languages/[LANGUAGE]/`
+- Universal principles go in `common/principles/`
+- Use Markdown for all documentation
+- Include code examples (both good and bad)
+- Add practical patterns from real projects
 
 ---
 
-**⭐ Star this project if it helps you with AI programming!**
+## 📝 License
+
+This project is open source and available under the MIT License.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Alibaba Group** - Java Development Manual (Taishan Edition)
+- **Robert C. Martin** - Clean Code and SOLID principles
+- **Martin Fowler** - Design patterns and refactoring practices
+- **Dave Smith & Jeff Friesen** - Android Development Recipes
+- **AutoTask Project** - Real-world Python automation patterns
+
+---
+
+## 📞 Contact
+
+- **GitHub**: https://github.com/leozhang2056/vibe-coding
+- **Issues**: https://github.com/leozhang2056/vibe-coding/issues
+
+---
+
+<div align="center">
+
+**⭐ If you find this project helpful, please give it a star! ⭐**
+
+Made with ❤️ by the Vibe Coding community
+
+</div>
