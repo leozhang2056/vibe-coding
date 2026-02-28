@@ -2,6 +2,16 @@
 
 > AI 辅助 Android 开发完整指南
 
+## 📚 核心文档
+
+1. **[Android 开发模式与最佳实践](./ANDROID_PATTERNS.md)** - 基于《Android 开发范例代码大全》提炼
+2. **[开发规范](./ANDROID_DEVELOPMENT.md)** - 完整的 Android 编码规范
+3. **[配置管理](./CONFIGURATION.md)** - Gradle 和构建配置
+4. **[CLAUDE.md](./CLAUDE.md)** - AI 编程提示词模板
+5. **[快速参考](./QUICK_REFERENCE.md)** - 常用代码片段速查
+
+---
+
 ## 快速开始
 
 ### 1. 技术栈
