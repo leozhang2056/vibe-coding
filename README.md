@@ -36,11 +36,13 @@ vibe-coding/
 │   │   ├── SOLID.md               # 单一职责、开闭原则等
 │   │   ├── CLEAN_CODE.md          # 代码整洁之道
 │   │   ├── CLEAN_ARCHITECTURE.md  # 简洁架构
-│   │   └── DRY_KISS_YAGNI.md      # DRY、KISS、YAGNI 原则
+│   │   ├── DRY_KISS_YAGNI.md      # DRY、KISS、YAGNI 原则
+│   │   └── AI_PROGRAMMING.md      # AI 编程最佳实践
 │   ├── patterns/             # 设计模式
 │   │   └── DESIGN_PATTERNS.md     # 工厂、策略、观察者等
-│   └── anti-patterns/        # 反模式
-│       └── ANTI_PATTERNS.md       # 魔法数字、嵌套地狱等
+│   ├── anti-patterns/        # 反模式
+│   │   └── ANTI_PATTERNS.md       # 魔法数字、嵌套地狱等
+│   └── QUICK_REFERENCE.md     # 快速参考指南
 │
 ├── languages/                 # 语言特定规范
 │   ├── python/               # Python 规范
@@ -55,36 +57,46 @@ vibe-coding/
 
 ---
 
-## 核心原则
+## 核心内容
 
-### SOLID 原则
+### 编程原则
 
-- **S**ingle Responsibility - 单一职责
-- **O**pen/Closed - 开闭原则
-- **L**iskov Substitution - 里氏替换
-- **I**nterface Segregation - 接口隔离
-- **D**ependency Inversion - 依赖倒置
-
-### Clean Code
-
-- 有意义的命名
-- 函数短小，只做一件事
-- 避免重复 (DRY)
-- 保持简单 (KISS)
-- 代码即文档
-
-### Clean Architecture
-
-- 依赖规则：外层 → 内层
-- 框架无关
-- 可测试
-- UI 无关
+| 原则 | 说明 | 文档 |
+|------|------|------|
+| **SOLID** | 单一职责、开闭、里氏替换、接口隔离、依赖倒置 | [SOLID.md](common/principles/SOLID.md) |
+| **Clean Code** | 代码整洁之道 | [CLEAN_CODE.md](common/principles/CLEAN_CODE.md) |
+| **Clean Architecture** | 简洁架构、依赖规则 | [CLEAN_ARCHITECTURE.md](common/principles/CLEAN_ARCHITECTURE.md) |
+| **DRY/KISS/YAGNI** | 不重复、保持简单、不做过度设计 | [DRY_KISS_YAGNI.md](common/principles/DRY_KISS_YAGNI.md) |
+| **AI 编程** | 与 AI 协作编程的最佳实践 | [AI_PROGRAMMING.md](common/principles/AI_PROGRAMMING.md) |
 
 ### 设计模式
 
-- 创建型：工厂、建造者、单例
-- 结构型：适配器、装饰器
-- 行为型：策略、观察者、命令
+- **创建型**：工厂、建造者、单例
+- **结构型**：适配器、装饰器、外观
+- **行为型**：策略、观察者、命令
+
+详见：[DESIGN_PATTERNS.md](common/patterns/DESIGN_PATTERNS.md)
+
+### 反模式（避免）
+
+- 魔法数字
+- 复制粘贴编程
+- 嵌套地狱
+- 过早优化
+- 大泥球架构
+
+详见：[ANTI_PATTERNS.md](common/anti-patterns/ANTI_PATTERNS.md)
+
+---
+
+## 语言支持
+
+| 语言 | 状态 | 文档 |
+|------|------|------|
+| Python | ✅ 完成 | [STYLE.md](languages/python/STYLE.md) |
+| JavaScript | ✅ 完成 | [STYLE.md](languages/javascript/STYLE.md) |
+| Go | 🚧 计划中 | - |
+| Rust | 🚧 计划中 | - |
 
 ---
 
@@ -111,20 +123,15 @@ vibe-coding/
 指出不符合规范的地方。
 ```
 
----
+### 场景 4：快速查找
 
-## 语言支持
-
-| 语言 | 状态 | 文档 |
-|------|------|------|
-| Python | ✅ 完成 | `languages/python/STYLE.md` |
-| JavaScript | ✅ 完成 | `languages/javascript/STYLE.md` |
-| Go | 🚧 计划中 | - |
-| Rust | 🚧 计划中 | - |
+```
+你：查看 vibe-coding 中的快速参考指南，找出 Python 数据验证的最佳实践。
+```
 
 ---
 
-## 参考
+## 参考资源
 
 基于以下经典著作：
 
@@ -132,6 +139,12 @@ vibe-coding/
 - **Clean Architecture** - Robert C. Martin
 - **The Pragmatic Programmer** - David Thomas
 - **Design Patterns** - GoF
+
+以及开源项目：
+- [程序员鱼皮的 AI 资源大全](https://github.com/liyupi/ai-guide) ⭐ 8.2k
+- [Android Vibe Coding 实战指南](https://github.com/SSSYoung/android-vibe-coding) ⭐ 73
+- [Beginner's Vibe Coding Guide](https://github.com/wendy7756/vibe-coding-guide) ⭐ 53
+- [氛围编程（Vibe Coding）终极指南](https://github.com/zhanglunet/vibe-coding) ⭐ 34
 
 ---
 
@@ -143,6 +156,7 @@ vibe-coding/
 - 设计模式示例
 - 最佳实践案例
 - 反模式案例
+- 项目模板
 
 ---
 
