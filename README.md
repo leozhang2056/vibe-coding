@@ -8,7 +8,7 @@
 
 ---
 
-## 快速开始
+## 🚀 快速开始
 
 ### 1. 克隆项目
 
@@ -27,7 +27,7 @@ cd vibe-coding
 
 ---
 
-## 文档结构
+## 📚 文档结构
 
 ```
 vibe-coding/
@@ -44,6 +44,8 @@ vibe-coding/
 │   │   └── ANTI_PATTERNS.md       # 魔法数字、嵌套地狱等
 │   ├── WORKFLOW.md            # Vibe Coding 工作流
 │   ├── TOOLS.md               # AI 编程工具推荐
+│   ├── PROJECT_STRUCTURE.md   # 项目组织结构
+│   ├── GETTING_STARTED.md     # 入门指南
 │   └── QUICK_REFERENCE.md     # 快速参考指南
 │
 ├── languages/                 # 语言特定规范
@@ -59,7 +61,7 @@ vibe-coding/
 
 ---
 
-## 核心内容
+## 📖 核心内容
 
 ### 编程原则
 
@@ -71,19 +73,21 @@ vibe-coding/
 | **DRY/KISS/YAGNI** | 不重复、保持简单、不做过度设计 | [DRY_KISS_YAGNI.md](common/principles/DRY_KISS_YAGNI.md) |
 | **AI 编程** | 与 AI 协作编程的最佳实践 | [AI_PROGRAMMING.md](common/principles/AI_PROGRAMMING.md) |
 
-### 工作流与工具
+### 工作流与实践
 
 | 内容 | 说明 | 文档 |
 |------|------|------|
 | **Vibe Coding 工作流** | 自然语言描述 → AI 生成 → 执行测试 → 反馈修正 | [WORKFLOW.md](common/WORKFLOW.md) |
 | **工具推荐** | Cursor、Copilot、Claude Code、Cline 等 | [TOOLS.md](common/TOOLS.md) |
+| **项目结构** | 目录组织、Makefile、Git 提交规范 | [PROJECT_STRUCTURE.md](common/PROJECT_STRUCTURE.md) |
+| **入门指南** | 从零到一，快速上手 AI 编程 | [GETTING_STARTED.md](common/GETTING_STARTED.md) |
 | **设计模式** | 工厂、策略、观察者、命令等 | [DESIGN_PATTERNS.md](common/patterns/DESIGN_PATTERNS.md) |
 | **反模式** | 魔法数字、嵌套地狱、过早优化等 | [ANTI_PATTERNS.md](common/anti-patterns/ANTI_PATTERNS.md) |
 | **快速参考** | 命名规范、错误处理、API 设计等 | [QUICK_REFERENCE.md](common/QUICK_REFERENCE.md) |
 
 ---
 
-## 语言支持
+## 🌐 语言支持
 
 | 语言 | 状态 | 文档 |
 |------|------|------|
@@ -94,7 +98,7 @@ vibe-coding/
 
 ---
 
-## 使用场景
+## 💡 使用场景
 
 ### 场景 1：项目初始化
 
@@ -123,39 +127,46 @@ vibe-coding/
 你：根据 vibe-coding 的工具推荐，选择适合我的 AI 编程工具。
 ```
 
+### 场景 5：新手入门
+
+```
+你：我想学习 Vibe Coding，有什么推荐的入门路径吗？
+```
+
 ---
 
-## 参考
+## 📚 参考
 
 基于以下经典著作和开源项目：
 
 ### 书籍
 
 - **Clean Code** - Robert C. Martin
-- **Clean Architecture** - Robert C. Martin
+- **Clean Architecture** - Robert C. Martin  
 - **The Pragmatic Programmer** - David Thomas
 - **Design Patterns** - GoF
 
 ### 开源项目
 
 - [程序员鱼皮的 AI 资源大全](https://github.com/liyupi/ai-guide) ⭐ 8.2k
-- [Android Vibe Coding 实战指南](https://github.com/SSSYoung/android-vibe-coding) ⭐ 73
 - [Beginner's Vibe Coding Guide](https://github.com/wendy7756/vibe-coding-guide) ⭐ 53
 - [氛围编程（Vibe Coding）终极指南](https://github.com/zhanglunet/vibe-coding) ⭐ 34
+- [ref-vibecoding](https://github.com/kennyzhu2013/ref-vibecoding) ⭐ 0
+- [VibeVibe 繁體中文版](https://github.com/godmakereth/vibe-vibe-tw) ⭐ 45
 
 ### 核心概念
 
-Vibe Coding 由 OpenAI 联合创始人 Andrej Karpathy 提出：
+Vibe Coding 由 OpenAI 联合创始人 **Andrej Karpathy** 提出：
 
 > **"完全沉浸在 AI 的 vibe 中，用自然语言与 AI 对话，AI 生成代码，开发者通过迭代反馈进入心流状态。"**
 
 ---
 
-## 贡献
+## 🤝 贡献
 
 欢迎补充：
 
-- 更多语言规范
+- 更多语言规范（Go、Rust、Java 等）
 - 设计模式示例
 - 最佳实践案例
 - 反模式案例
@@ -164,16 +175,16 @@ Vibe Coding 由 OpenAI 联合创始人 Andrej Karpathy 提出：
 
 ---
 
-## License
+## 📄 License
 
 MIT
 
 ---
 
-## GitHub
+## 🔗 GitHub
 
 https://github.com/leozhang2056/vibe-coding
 
 ---
 
-**Star ⭐ this project if it helps you with AI programming!**
+**⭐ Star this project if it helps you with AI programming!**
