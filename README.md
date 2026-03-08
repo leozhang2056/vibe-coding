@@ -33,6 +33,7 @@ Before starting a new project:
 vibe-coding/
 ├── common/                    # Universal principles (language-agnostic)
 │   ├── principles/           # Core principles
+│   │   ├── FIRST_PRINCIPLES.md    # First Principles thinking
 │   │   ├── SOLID.md               # Single responsibility, Open-closed, etc.
 │   │   ├── CLEAN_CODE.md          # Clean Code principles
 │   │   ├── CLEAN_ARCHITECTURE.md  # Clean Architecture
@@ -86,6 +87,7 @@ vibe-coding/
 ### 2. Industry Standards Integration
 
 - **Alibaba Java Development Manual** (Taishan Edition) - 13 core questions
+- **First Principles** – reason from fundamentals; avoid bandwagon decisions
 - **Clean Code** principles by Robert C. Martin
 - **SOLID** design principles
 - **DRY, KISS, YAGNI** practices
@@ -127,11 +129,12 @@ Then follow the workflow (common/WORKFLOW.md) to begin development.
 
 **Recommended Reading Order:**
 
-1. `common/principles/AI_PROGRAMMING.md` - AI programming best practices
-2. `common/principles/SOLID.md` - Design principles
-3. `common/principles/CLEAN_CODE.md` - Code quality
-4. `languages/[LANGUAGE]/README.md` - Language specifics
-5. `languages/[LANGUAGE]/CLAUDE.md` - AI prompt template
+1. `common/principles/FIRST_PRINCIPLES.md` - First principles (thinking foundation)
+2. `common/principles/AI_PROGRAMMING.md` - AI programming best practices
+3. `common/principles/SOLID.md` - Design principles
+4. `common/principles/CLEAN_CODE.md` - Code quality
+5. `languages/[LANGUAGE]/README.md` - Language specifics
+6. `languages/[LANGUAGE]/CLAUDE.md` - AI prompt template
 
 ---
 
@@ -141,6 +144,7 @@ Then follow the workflow (common/WORKFLOW.md) to begin development.
 
 | Document | Description | Status |
 |----------|-------------|--------|
+| [FIRST_PRINCIPLES](./common/principles/FIRST_PRINCIPLES.md) | First-principles thinking: reason from facts, question assumptions, avoid bandwagon | ✅ Complete |
 | [SOLID](./common/principles/SOLID.md) | Single responsibility, Open-closed, Liskov substitution, Interface segregation, Dependency inversion | ✅ Complete |
 | [CLEAN_CODE](./common/principles/CLEAN_CODE.md) | Meaningful names, functions, comments, error handling | ✅ Complete |
 | [CLEAN_ARCHITECTURE](./common/principles/CLEAN_ARCHITECTURE.md) | Dependency rules, entities, use cases, interfaces | ✅ Complete |

@@ -33,6 +33,7 @@ cd vibe-coding
 vibe-coding/
 ├── common/                    # 通用原则（语言无关）
 │   ├── principles/           # 核心原则
+│   │   ├── FIRST_PRINCIPLES.md    # 第一性原则
 │   │   ├── SOLID.md               # 单一职责、开闭原则等
 │   │   ├── CLEAN_CODE.md          # 代码整洁之道
 │   │   ├── CLEAN_ARCHITECTURE.md  # 简洁架构
@@ -86,6 +87,7 @@ vibe-coding/
 ### 2. 行业标准集成
 
 - **阿里巴巴 Java 开发手册**（泰山版）- 13 个核心问题
+- **第一性原则** - 从基本事实出发推理，避免盲目跟风
 - **Clean Code** 原则 - Robert C. Martin
 - **SOLID** 设计原则
 - **DRY、KISS、YAGNI** 实践
@@ -127,11 +129,12 @@ vibe-coding/
 
 **推荐阅读顺序：**
 
-1. `common/principles/AI_PROGRAMMING.md` - AI 编程最佳实践
-2. `common/principles/SOLID.md` - 设计原则
-3. `common/principles/CLEAN_CODE.md` - 代码质量
-4. `languages/[LANGUAGE]/README.md` - 语言特定规则
-5. `languages/[LANGUAGE]/CLAUDE.md` - AI 提示词模板
+1. `common/principles/FIRST_PRINCIPLES.md` - 第一性原则（思维基础）
+2. `common/principles/AI_PROGRAMMING.md` - AI 编程最佳实践
+3. `common/principles/SOLID.md` - 设计原则
+4. `common/principles/CLEAN_CODE.md` - 代码质量
+5. `languages/[LANGUAGE]/README.md` - 语言特定规则
+6. `languages/[LANGUAGE]/CLAUDE.md` - AI 提示词模板
 
 ---
 
@@ -141,6 +144,7 @@ vibe-coding/
 
 | 文档 | 描述 | 状态 |
 |------|------|------|
+| [FIRST_PRINCIPLES](./common/principles/FIRST_PRINCIPLES.md) | 第一性思维：从基本事实推理，质疑假设，避免盲目跟风 | ✅ 完成 |
 | [SOLID](./common/principles/SOLID.md) | 单一职责、开闭原则、里氏替换、接口隔离、依赖倒置 | ✅ 完成 |
 | [CLEAN_CODE](./common/principles/CLEAN_CODE.md) | 有意义的命名、函数、注释、错误处理 | ✅ 完成 |
 | [CLEAN_ARCHITECTURE](./common/principles/CLEAN_ARCHITECTURE.md) | 依赖规则、实体、用例、接口 | ✅ 完成 |
