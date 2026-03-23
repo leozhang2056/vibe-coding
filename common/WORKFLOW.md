@@ -188,6 +188,12 @@ AI 分析需求并生成代码：
 
 ---
 
+## Agent 执行纪律（高能动性）
+
+迭代中若涉及调试、配置或集成失败，Agent 应遵守 **闭环、事实驱动、穷尽排障**，避免重复同一失败路径后直接放弃。完整条文见 [principles/AGENT_HIGH_AGENCY.md](./principles/AGENT_HIGH_AGENCY.md)（与 [PUA Skill](https://github.com/leozhang2056/pua) 理念对齐）。
+
+---
+
 ## AI 编码检查清单
 
 编码时，确保符合以下检查：
@@ -199,3 +205,4 @@ AI 分析需求并生成代码：
 - [ ] 分步骤迭代开发
 - [ ] 保持上下文连续
 - [ ] 每轮都测试反馈
+- [ ] 符合 [AGENT_HIGH_AGENCY.md](./principles/AGENT_HIGH_AGENCY.md)（验证后再宣称完成）

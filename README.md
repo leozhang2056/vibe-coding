@@ -31,9 +31,13 @@ Before starting a new project:
 
 ```
 vibe-coding/
+├── .cursor/
+│   └── rules/                 # Cursor rules (optional)
+│       └── vibe-agent-discipline.mdc  # High-agency execution discipline (always-on)
 ├── common/                    # Universal principles (language-agnostic)
 │   ├── principles/           # Core principles
 │   │   ├── FIRST_PRINCIPLES.md    # First Principles thinking
+│   │   ├── AGENT_HIGH_AGENCY.md   # High-agency discipline (PUA-aligned)
 │   │   ├── SOLID.md               # Single responsibility, Open-closed, etc.
 │   │   ├── CLEAN_CODE.md          # Clean Code principles
 │   │   ├── CLEAN_ARCHITECTURE.md  # Clean Architecture
@@ -69,8 +73,14 @@ vibe-coding/
 │   │   ├── CLAUDE.md
 │   │   └── README.md
 │   ├── go/                   # Go (planned)
+│   │   └── README.md
 │   └── rust/                 # Rust (planned)
+│       └── README.md
 │
+├── AGENTS.md                 # Entry notes for AI agents
+├── CHANGELOG.md              # Changelog
+├── CONTRIBUTING.md           # Contributing guide
+├── LICENSE                   # MIT License
 └── README.md                 # This file
 ```
 
@@ -91,6 +101,7 @@ vibe-coding/
 - **Clean Code** principles by Robert C. Martin
 - **SOLID** design principles
 - **DRY, KISS, YAGNI** practices
+- **High-agency execution discipline** (aligned with [PUA Skill](https://github.com/leozhang2056/pua)) — close the loop, fact-driven, exhaust debugging paths
 - **Android Development Recipes** patterns
 
 ### 3. Real Project Patterns
@@ -110,11 +121,11 @@ When starting a new project:
 
 ```
 Please read /root/.openclaw/workspace/vibe-coding/ first to understand:
-1. Universal programming principles (common/)
+1. Universal programming principles (common/), including high-agency discipline (common/principles/AGENT_HIGH_AGENCY.md)
 2. Language-specific standards for [LANGUAGE] (languages/[LANGUAGE]/)
 3. Review the AI prompt template (languages/[LANGUAGE]/CLAUDE.md)
 
-Then follow the workflow (common/WORKFLOW.md) to begin development.
+Then follow the workflow (common/WORKFLOW.md) to begin development. If using Cursor, also apply rules under .cursor/rules/.
 ```
 
 ### For Developers
@@ -126,15 +137,17 @@ Then follow the workflow (common/WORKFLOW.md) to begin development.
 3. **Style Issues?** See `common/principles/CLEAN_CODE.md`
 4. **Architecture?** Review `common/principles/CLEAN_ARCHITECTURE.md`
 5. **Design Patterns?** Reference `common/patterns/DESIGN_PATTERNS.md`
+6. **Agent gives up / skips verification?** Read `common/principles/AGENT_HIGH_AGENCY.md`
 
 **Recommended Reading Order:**
 
 1. `common/principles/FIRST_PRINCIPLES.md` - First principles (thinking foundation)
-2. `common/principles/AI_PROGRAMMING.md` - AI programming best practices
-3. `common/principles/SOLID.md` - Design principles
-4. `common/principles/CLEAN_CODE.md` - Code quality
-5. `languages/[LANGUAGE]/README.md` - Language specifics
-6. `languages/[LANGUAGE]/CLAUDE.md` - AI prompt template
+2. `common/principles/AGENT_HIGH_AGENCY.md` - High-agency discipline (close loop & debugging)
+3. `common/principles/AI_PROGRAMMING.md` - AI programming best practices
+4. `common/principles/SOLID.md` - Design principles
+5. `common/principles/CLEAN_CODE.md` - Code quality
+6. `languages/[LANGUAGE]/README.md` - Language specifics
+7. `languages/[LANGUAGE]/CLAUDE.md` - AI prompt template
 
 ---
 
@@ -145,6 +158,7 @@ Then follow the workflow (common/WORKFLOW.md) to begin development.
 | Document | Description | Status |
 |----------|-------------|--------|
 | [FIRST_PRINCIPLES](./common/principles/FIRST_PRINCIPLES.md) | First-principles thinking: reason from facts, question assumptions, avoid bandwagon | ✅ Complete |
+| [AGENT_HIGH_AGENCY](./common/principles/AGENT_HIGH_AGENCY.md) | High-agency execution: three red lines, anti-lazy patterns, 7-point checklist ([PUA](https://github.com/leozhang2056/pua)-aligned) | ✅ Complete |
 | [SOLID](./common/principles/SOLID.md) | Single responsibility, Open-closed, Liskov substitution, Interface segregation, Dependency inversion | ✅ Complete |
 | [CLEAN_CODE](./common/principles/CLEAN_CODE.md) | Meaningful names, functions, comments, error handling | ✅ Complete |
 | [CLEAN_ARCHITECTURE](./common/principles/CLEAN_ARCHITECTURE.md) | Dependency rules, entities, use cases, interfaces | ✅ Complete |
@@ -216,10 +230,10 @@ Extracted from actual projects:
 
 ```
 Before writing code, please:
-1. Read /root/.openclaw/workspace/vibe-coding/common/principles/
+1. Read /root/.openclaw/workspace/vibe-coding/common/principles/ (focus: AGENT_HIGH_AGENCY.md, FIRST_PRINCIPLES.md)
 2. Read /root/.openclaw/workspace/vibe-coding/languages/python/
 3. Review the AutoTask project patterns at /root/.openclaw/workspace/auto-reward/
-4. Apply these standards to the new code
+4. Apply these standards to the new code; close the loop before claiming done (tests/build/logs)
 
 Follow the workflow in common/WORKFLOW.md and use the template in languages/python/CLAUDE.md
 ```
@@ -230,29 +244,29 @@ Follow the workflow in common/WORKFLOW.md and use the template in languages/pyth
 
 | Component | Status | Last Updated |
 |-----------|--------|--------------|
-| Universal principles | ✅ Complete | 2026-02-28 |
-| Python guide | ✅ Complete | 2026-02-28 |
-| JavaScript guide | ✅ Complete | 2026-02-28 |
-| Java guide | ✅ Complete + Alibaba standards | 2026-02-28 |
-| Android guide | ✅ Complete + Patterns | 2026-02-28 |
-| Go guide | 🔜 Planned | - |
-| Rust guide | 🔜 Planned | - |
+| Universal principles | ✅ Complete (incl. PUA-aligned AGENT_HIGH_AGENCY) | 2026-03-08 |
+| Python guide | ✅ Complete | 2026-03-08 |
+| JavaScript guide | ✅ Complete | 2026-03-08 |
+| Java guide | ✅ Complete + Alibaba standards | 2026-03-08 |
+| Android guide | ✅ Complete + Patterns | 2026-03-08 |
+| Go guide | 🔜 Planned (README placeholder) | 2026-03-08 |
+| Rust guide | 🔜 Planned (README placeholder) | 2026-03-08 |
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please:
+See **[CONTRIBUTING.md](./CONTRIBUTING.md)** for the full flow. Summary:
 
 1. Fork the repository
 2. Create a feature branch
 3. Add or improve documentation
 4. Follow the existing style and structure
-5. Submit a pull request
+5. Open a pull request; **update [CHANGELOG.md](./CHANGELOG.md) for notable changes**
 
 **Guidelines:**
 - Keep language-specific rules in `languages/[LANGUAGE]/`
-- Universal principles go in `common/principles/`
+- Universal principles go in `common/principles/`; Cursor always-on rules go in `.cursor/rules/`
 - Use Markdown for all documentation
 - Include code examples (both good and bad)
 - Add practical patterns from real projects
@@ -261,7 +275,7 @@ Contributions are welcome! Please:
 
 ## 📝 License
 
-This project is open source and available under the MIT License.
+Open source under the **[MIT License](./LICENSE)**.
 
 ---
 
@@ -272,6 +286,7 @@ This project is open source and available under the MIT License.
 - **Martin Fowler** - Design patterns and refactoring practices
 - **Dave Smith & Jeff Friesen** - Android Development Recipes
 - **AutoTask Project** - Real-world Python automation patterns
+- **PUA Skill** ([leozhang2056/pua](https://github.com/leozhang2056/pua)) - High-agency agent behavior design, distilled into `AGENT_HIGH_AGENCY.md`
 
 ---
 

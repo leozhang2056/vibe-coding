@@ -31,9 +31,13 @@ cd vibe-coding
 
 ```
 vibe-coding/
+├── .cursor/
+│   └── rules/                 # Cursor 规则（可选）
+│       └── vibe-agent-discipline.mdc  # 高能动性执行纪律（常驻）
 ├── common/                    # 通用原则（语言无关）
 │   ├── principles/           # 核心原则
 │   │   ├── FIRST_PRINCIPLES.md    # 第一性原则
+│   │   ├── AGENT_HIGH_AGENCY.md   # 高能动性执行纪律（融合 PUA）
 │   │   ├── SOLID.md               # 单一职责、开闭原则等
 │   │   ├── CLEAN_CODE.md          # 代码整洁之道
 │   │   ├── CLEAN_ARCHITECTURE.md  # 简洁架构
@@ -69,8 +73,14 @@ vibe-coding/
 │   │   ├── CLAUDE.md
 │   │   └── README.md
 │   ├── go/                   # Go（计划中）
+│   │   └── README.md
 │   └── rust/                 # Rust（计划中）
+│       └── README.md
 │
+├── AGENTS.md                 # 给 AI Agent 的入口说明
+├── CHANGELOG.md              # 变更记录
+├── CONTRIBUTING.md           # 贡献指南
+├── LICENSE                   # MIT 许可证
 └── README.md                 # 本文件
 ```
 
@@ -91,6 +101,7 @@ vibe-coding/
 - **Clean Code** 原则 - Robert C. Martin
 - **SOLID** 设计原则
 - **DRY、KISS、YAGNI** 实践
+- **高能动性执行纪律**（融合 [PUA Skill](https://github.com/leozhang2056/pua)）— 闭环、事实驱动、穷尽排障
 - **Android 开发范例代码大全**模式
 
 ### 3. 真实项目模式
@@ -110,11 +121,11 @@ vibe-coding/
 
 ```
 请先阅读 /root/.openclaw/workspace/vibe-coding/ 以了解：
-1. 通用编程原则（common/）
+1. 通用编程原则（common/），含高能动性执行纪律（common/principles/AGENT_HIGH_AGENCY.md）
 2. 特定语言标准 [语言名称]（languages/[LANGUAGE]/）
 3. 查看 AI 提示词模板（languages/[LANGUAGE]/CLAUDE.md）
 
-然后按照工作流（common/WORKFLOW.md）开始开发。
+然后按照工作流（common/WORKFLOW.md）开始开发。若使用 Cursor，可同时加载 .cursor/rules/ 下的规则。
 ```
 
 ### 对于开发者
@@ -126,15 +137,17 @@ vibe-coding/
 3. **风格问题？** 参考 `common/principles/CLEAN_CODE.md`
 4. **架构设计？** 复习 `common/principles/CLEAN_ARCHITECTURE.md`
 5. **设计模式？** 查阅 `common/patterns/DESIGN_PATTERNS.md`
+6. **Agent 总放弃/不验证？** 阅读 `common/principles/AGENT_HIGH_AGENCY.md`
 
 **推荐阅读顺序：**
 
 1. `common/principles/FIRST_PRINCIPLES.md` - 第一性原则（思维基础）
-2. `common/principles/AI_PROGRAMMING.md` - AI 编程最佳实践
-3. `common/principles/SOLID.md` - 设计原则
-4. `common/principles/CLEAN_CODE.md` - 代码质量
-5. `languages/[LANGUAGE]/README.md` - 语言特定规则
-6. `languages/[LANGUAGE]/CLAUDE.md` - AI 提示词模板
+2. `common/principles/AGENT_HIGH_AGENCY.md` - 高能动性执行纪律（闭环与排障）
+3. `common/principles/AI_PROGRAMMING.md` - AI 编程最佳实践
+4. `common/principles/SOLID.md` - 设计原则
+5. `common/principles/CLEAN_CODE.md` - 代码质量
+6. `languages/[LANGUAGE]/README.md` - 语言特定规则
+7. `languages/[LANGUAGE]/CLAUDE.md` - AI 提示词模板
 
 ---
 
@@ -145,6 +158,7 @@ vibe-coding/
 | 文档 | 描述 | 状态 |
 |------|------|------|
 | [FIRST_PRINCIPLES](./common/principles/FIRST_PRINCIPLES.md) | 第一性思维：从基本事实推理，质疑假设，避免盲目跟风 | ✅ 完成 |
+| [AGENT_HIGH_AGENCY](./common/principles/AGENT_HIGH_AGENCY.md) | 高能动性执行：三条底线、反惰性模式、七点排障（融合 [PUA](https://github.com/leozhang2056/pua)） | ✅ 完成 |
 | [SOLID](./common/principles/SOLID.md) | 单一职责、开闭原则、里氏替换、接口隔离、依赖倒置 | ✅ 完成 |
 | [CLEAN_CODE](./common/principles/CLEAN_CODE.md) | 有意义的命名、函数、注释、错误处理 | ✅ 完成 |
 | [CLEAN_ARCHITECTURE](./common/principles/CLEAN_ARCHITECTURE.md) | 依赖规则、实体、用例、接口 | ✅ 完成 |
@@ -216,10 +230,10 @@ vibe-coding/
 
 ```
 在编写代码之前，请：
-1. 阅读 /root/.openclaw/workspace/vibe-coding/common/principles/
+1. 阅读 /root/.openclaw/workspace/vibe-coding/common/principles/（重点：AGENT_HIGH_AGENCY.md、FIRST_PRINCIPLES.md）
 2. 阅读 /root/.openclaw/workspace/vibe-coding/languages/python/
 3. 查看 /root/.openclaw/workspace/auto-reward/ 的 AutoTask 项目模式
-4. 将这些标准应用到新代码中
+4. 将这些标准应用到新代码中；完成任务前须闭环验证（测试/构建/日志）
 
 遵循 common/WORKFLOW.md 中的工作流，并使用 languages/python/CLAUDE.md 中的模板
 ```
@@ -230,29 +244,29 @@ vibe-coding/
 
 | 组件 | 状态 | 最后更新 |
 |------|------|----------|
-| 通用原则 | ✅ 完成 | 2026-02-28 |
-| Python 指南 | ✅ 完成 | 2026-02-28 |
-| JavaScript 指南 | ✅ 完成 | 2026-02-28 |
-| Java 指南 | ✅ 完成 + 阿里巴巴规范 | 2026-02-28 |
-| Android 指南 | ✅ 完成 + 开发模式 | 2026-02-28 |
-| Go 指南 | 🔜 计划中 | - |
-| Rust 指南 | 🔜 计划中 | - |
+| 通用原则 | ✅ 完成（含 PUA 融合之 AGENT_HIGH_AGENCY） | 2026-03-08 |
+| Python 指南 | ✅ 完成 | 2026-03-08 |
+| JavaScript 指南 | ✅ 完成 | 2026-03-08 |
+| Java 指南 | ✅ 完成 + 阿里巴巴规范 | 2026-03-08 |
+| Android 指南 | ✅ 完成 + 开发模式 | 2026-03-08 |
+| Go 指南 | 🔜 计划中（已有 README 占位） | 2026-03-08 |
+| Rust 指南 | 🔜 计划中（已有 README 占位） | 2026-03-08 |
 
 ---
 
 ## 🤝 贡献
 
-欢迎贡献！请：
+完整流程见 **[CONTRIBUTING.md](./CONTRIBUTING.md)**。摘要如下：
 
 1. Fork 本仓库
 2. 创建特性分支
 3. 添加或改进文档
 4. 遵循现有的风格和结构
-5. 提交 Pull Request
+5. 提交 Pull Request；**重大变更请更新 [CHANGELOG.md](./CHANGELOG.md)**
 
 **指南：**
 - 语言特定规则放在 `languages/[LANGUAGE]/`
-- 通用原则放在 `common/principles/`
+- 通用原则放在 `common/principles/`；Cursor 常驻规则可放在 `.cursor/rules/`
 - 所有文档使用 Markdown
 - 包含代码示例（好的和坏的）
 - 添加真实项目中的实用模式
@@ -261,7 +275,7 @@ vibe-coding/
 
 ## 📝 许可证
 
-本项目是开源的，使用 MIT 许可证。
+本项目在 **[MIT License](./LICENSE)** 下开源。
 
 ---
 
@@ -272,6 +286,7 @@ vibe-coding/
 - **Martin Fowler** - 设计模式和重构实践
 - **Dave Smith & Jeff Friesen** - Android 开发范例代码大全
 - **AutoTask 项目** - 真实的 Python 自动化模式
+- **PUA Skill**（[leozhang2056/pua](https://github.com/leozhang2056/pua)）- 高能动性 Agent 行为设计，已提炼进 `AGENT_HIGH_AGENCY.md`
 
 ---
 

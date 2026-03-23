@@ -2,6 +2,18 @@
 
 > Claude 模型使用指南和编程约束
 
+## 使用 vibe-coding 约束库时建议先读
+
+若你在业务项目中引用本仓库文档，建议优先阅读：
+
+1. [`principles/AGENT_HIGH_AGENCY.md`](./principles/AGENT_HIGH_AGENCY.md) — 闭环、事实驱动、穷尽排障  
+2. [`principles/FIRST_PRINCIPLES.md`](./principles/FIRST_PRINCIPLES.md) — 第一性原则  
+3. 仓库根目录 [`README_CN.md`](../README_CN.md) / [`README.md`](../README.md) — 全貌与索引  
+
+Cursor 用户可同时启用 [`.cursor/rules/vibe-agent-discipline.mdc`](../.cursor/rules/vibe-agent-discipline.mdc)。
+
+---
+
 ## Claude 核心能力
 
 Claude 是 Anthropic 开发的 AI 助手，擅长：

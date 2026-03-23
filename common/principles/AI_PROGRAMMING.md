@@ -148,6 +148,16 @@ def process_data(items):
 
 ---
 
+## 9. 高能动性执行纪律（与 PUA 理念对齐）
+
+与 AI 协作时，Agent 端应遵守 **闭环、事实驱动、穷尽再收口**，避免蛮力重试、甩锅用户、工具闲置与未验证即宣称完成。
+
+**完整条文、惰性模式对照、七点排障清单：** 见 [AGENT_HIGH_AGENCY.md](./AGENT_HIGH_AGENCY.md)（内容融合自 [PUA Skill](https://github.com/leozhang2056/pua) 的高能动性设计，表述已去戏剧化）。
+
+**Cursor 用户：** 本仓库 `.cursor/rules/vibe-agent-discipline.mdc` 对上述纪律做常驻提醒。
+
+---
+
 ## AI 编码检查清单
 
 - [ ] 提示词清晰明确
@@ -158,3 +168,4 @@ def process_data(items):
 - [ ] 遵循安全最佳实践
 - [ ] 使用版本控制
 - [ ] 代码自解释，减少注释
+- [ ] Agent 执行符合 [AGENT_HIGH_AGENCY.md](./AGENT_HIGH_AGENCY.md)（闭环、验证、穷尽排障）

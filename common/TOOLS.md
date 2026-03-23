@@ -18,6 +18,8 @@
 
 **官网：** https://cursor.sh
 
+**与本仓库配合：** 将 `vibe-coding` 克隆或子模块进项目后，可使用本仓库 [`.cursor/rules/vibe-agent-discipline.mdc`](../.cursor/rules/vibe-agent-discipline.mdc) 作为常驻 Agent 纪律（高能动性 / 闭环验证）。
+
 ---
 
 ### GitHub Copilot ⭐️⭐️⭐️⭐️

@@ -2,6 +2,18 @@
 
 > 常用编程模式和最佳实践速查
 
+## AI Agent 执行（高能动性）
+
+| 要点 | 一句话 |
+|------|--------|
+| 闭环 | 完成须有测试/构建/日志等可核对证据 |
+| 事实驱动 | 归咎环境前先验证 |
+| 穷尽 | 同一路径多次失败则换假设 + 七点排障清单 |
+
+详见 [`principles/AGENT_HIGH_AGENCY.md`](./principles/AGENT_HIGH_AGENCY.md) · 融合 [PUA Skill](https://github.com/leozhang2056/pua)
+
+---
+
 ## 命名规范
 
 | 语言 | 变量 | 函数 | 类 | 常量 |

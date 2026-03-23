@@ -12,6 +12,8 @@ Vibe Coding = **AI 氛围编程**，通过自然语言与 AI 对话，让 AI 生
 - 快速迭代反馈
 - 专注于创意而非语法
 
+**让 AI「靠谱」：** 本仓库将 [PUA](https://github.com/leozhang2056/pua) 类高能动性标准提炼为 [`common/principles/AGENT_HIGH_AGENCY.md`](./principles/AGENT_HIGH_AGENCY.md)（闭环验证、事实驱动、穷尽排障）。用 Cursor 打开本仓库时会通过 `.cursor/rules/` 自动提醒。
+
 ---
 
 ## 第一步：选择 AI 编程工具
