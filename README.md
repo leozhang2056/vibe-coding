@@ -38,6 +38,7 @@ vibe-coding/
 │   ├── principles/           # Core principles
 │   │   ├── FIRST_PRINCIPLES.md    # First Principles thinking
 │   │   ├── AGENT_HIGH_AGENCY.md   # High-agency discipline (PUA-aligned)
+│   │   ├── PLANNING_WITH_FILES.md # File-based planning (3-file pattern)
 │   │   ├── SOLID.md               # Single responsibility, Open-closed, etc.
 │   │   ├── CLEAN_CODE.md          # Clean Code principles
 │   │   ├── CLEAN_ARCHITECTURE.md  # Clean Architecture
@@ -96,6 +97,7 @@ vibe-coding/
 
 ### 2. Industry Standards Integration
 
+- **File-based planning** — Context = RAM, Filesystem = Disk. Persistent 3-file pattern (`task_plan.md`, `findings.md`, `progress.md`). (Inspired by [planning-with-files](https://github.com/OthmanAdi/planning-with-files))
 - **Alibaba Java Development Manual** (Taishan Edition) - 13 core questions
 - **First Principles** – reason from fundamentals; avoid bandwagon decisions
 - **Clean Code** principles by Robert C. Martin
@@ -122,8 +124,9 @@ When starting a new project:
 ```
 Please read /root/.openclaw/workspace/vibe-coding/ first to understand:
 1. Universal programming principles (common/), including high-agency discipline (common/principles/AGENT_HIGH_AGENCY.md)
-2. Language-specific standards for [LANGUAGE] (languages/[LANGUAGE]/)
-3. Review the AI prompt template (languages/[LANGUAGE]/CLAUDE.md)
+2. Planning with files for multi-step tasks (common/principles/PLANNING_WITH_FILES.md)
+3. Language-specific standards for [LANGUAGE] (languages/[LANGUAGE]/)
+4. Review the AI prompt template (languages/[LANGUAGE]/CLAUDE.md)
 
 Then follow the workflow (common/WORKFLOW.md) to begin development. If using Cursor, also apply rules under .cursor/rules/.
 ```
@@ -133,21 +136,23 @@ Then follow the workflow (common/WORKFLOW.md) to begin development. If using Cur
 **Quick Reference:**
 
 1. **New Project?** Read `common/GETTING_STARTED.md`
-2. **Language Guide?** Check `languages/[LANGUAGE]/README.md`
-3. **Style Issues?** See `common/principles/CLEAN_CODE.md`
-4. **Architecture?** Review `common/principles/CLEAN_ARCHITECTURE.md`
-5. **Design Patterns?** Reference `common/patterns/DESIGN_PATTERNS.md`
-6. **Agent gives up / skips verification?** Read `common/principles/AGENT_HIGH_AGENCY.md`
+2. **Planning?** See `common/principles/PLANNING_WITH_FILES.md` (3-file pattern)
+3. **Language Guide?** Check `languages/[LANGUAGE]/README.md`
+4. **Style Issues?** See `common/principles/CLEAN_CODE.md`
+5. **Architecture?** Review `common/principles/CLEAN_ARCHITECTURE.md`
+6. **Design Patterns?** Reference `common/patterns/DESIGN_PATTERNS.md`
+7. **Agent gives up / skips verification?** Read `common/principles/AGENT_HIGH_AGENCY.md`
 
 **Recommended Reading Order:**
 
 1. `common/principles/FIRST_PRINCIPLES.md` - First principles (thinking foundation)
 2. `common/principles/AGENT_HIGH_AGENCY.md` - High-agency discipline (close loop & debugging)
 3. `common/principles/AI_PROGRAMMING.md` - AI programming best practices
-4. `common/principles/SOLID.md` - Design principles
-5. `common/principles/CLEAN_CODE.md` - Code quality
-6. `languages/[LANGUAGE]/README.md` - Language specifics
-7. `languages/[LANGUAGE]/CLAUDE.md` - AI prompt template
+4. `common/principles/PLANNING_WITH_FILES.md` - File-based planning (persistent context)
+5. `common/principles/SOLID.md` - Design principles
+6. `common/principles/CLEAN_CODE.md` - Code quality
+7. `languages/[LANGUAGE]/README.md` - Language specifics
+8. `languages/[LANGUAGE]/CLAUDE.md` - AI prompt template
 
 ---
 
@@ -159,6 +164,7 @@ Then follow the workflow (common/WORKFLOW.md) to begin development. If using Cur
 |----------|-------------|--------|
 | [FIRST_PRINCIPLES](./common/principles/FIRST_PRINCIPLES.md) | First-principles thinking: reason from facts, question assumptions, avoid bandwagon | ✅ Complete |
 | [AGENT_HIGH_AGENCY](./common/principles/AGENT_HIGH_AGENCY.md) | High-agency execution: three red lines, anti-lazy patterns, 7-point checklist ([PUA](https://github.com/leozhang2056/pua)-aligned) | ✅ Complete |
+| [PLANNING_WITH_FILES](./common/principles/PLANNING_WITH_FILES.md) | File-based planning: 3-file pattern, 2-action rule, 3-strike error protocol ([planning-with-files](https://github.com/OthmanAdi/planning-with-files)-inspired) | ✅ Complete |
 | [SOLID](./common/principles/SOLID.md) | Single responsibility, Open-closed, Liskov substitution, Interface segregation, Dependency inversion | ✅ Complete |
 | [CLEAN_CODE](./common/principles/CLEAN_CODE.md) | Meaningful names, functions, comments, error handling | ✅ Complete |
 | [CLEAN_ARCHITECTURE](./common/principles/CLEAN_ARCHITECTURE.md) | Dependency rules, entities, use cases, interfaces | ✅ Complete |
@@ -222,18 +228,20 @@ Extracted from actual projects:
 ### Recommended Workflow
 
 1. **Read First**: Always read the project structure before coding
-2. **Follow Hierarchy**: Universal principles → Language rules → Project conventions
-3. **Use Templates**: Check `CLAUDE.md` for AI prompt templates
-4. **Verify**: Cross-reference against examples in real projects
+2. **Plan First**: For multi-step tasks, create `task_plan.md`, `findings.md`, `progress.md` before coding
+3. **Follow Hierarchy**: Universal principles → Language rules → Project conventions
+4. **Use Templates**: Check `CLAUDE.md` for AI prompt templates
+5. **Verify**: Cross-reference against examples in real projects
 
 ### Example Prompt
 
 ```
 Before writing code, please:
-1. Read /root/.openclaw/workspace/vibe-coding/common/principles/ (focus: AGENT_HIGH_AGENCY.md, FIRST_PRINCIPLES.md)
+1. Read /root/.openclaw/workspace/vibe-coding/common/principles/ (focus: AGENT_HIGH_AGENCY.md, FIRST_PRINCIPLES.md, PLANNING_WITH_FILES.md)
 2. Read /root/.openclaw/workspace/vibe-coding/languages/python/
 3. Review the AutoTask project patterns at /root/.openclaw/workspace/auto-reward/
-4. Apply these standards to the new code; close the loop before claiming done (tests/build/logs)
+4. For multi-step tasks, create task_plan.md, findings.md, and progress.md first
+5. Apply these standards to the new code; close the loop before claiming done (tests/build/logs)
 
 Follow the workflow in common/WORKFLOW.md and use the template in languages/python/CLAUDE.md
 ```
@@ -244,7 +252,7 @@ Follow the workflow in common/WORKFLOW.md and use the template in languages/pyth
 
 | Component | Status | Last Updated |
 |-----------|--------|--------------|
-| Universal principles | ✅ Complete (incl. PUA-aligned AGENT_HIGH_AGENCY) | 2026-03-08 |
+| Universal principles | ✅ Complete (incl. PUA-aligned AGENT_HIGH_AGENCY + PLANNING_WITH_FILES) | 2026-06-20 |
 | Python guide | ✅ Complete | 2026-03-08 |
 | JavaScript guide | ✅ Complete | 2026-03-08 |
 | Java guide | ✅ Complete + Alibaba standards | 2026-03-08 |
@@ -287,6 +295,7 @@ Open source under the **[MIT License](./LICENSE)**.
 - **Dave Smith & Jeff Friesen** - Android Development Recipes
 - **AutoTask Project** - Real-world Python automation patterns
 - **PUA Skill** ([leozhang2056/pua](https://github.com/leozhang2056/pua)) - High-agency agent behavior design, distilled into `AGENT_HIGH_AGENCY.md`
+- **Ahmad Othman Ammar Adi** - [planning-with-files](https://github.com/OthmanAdi/planning-with-files) (MIT License), the file-based planning pattern adapted into `PLANNING_WITH_FILES.md`
 
 ---
 

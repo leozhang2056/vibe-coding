@@ -15,6 +15,22 @@ Vibe Coding = **AI 协作编程**，完全沉浸在 AI 的氛围中，通过自�
 
 ## 工作流程
 
+### 0. 文件化规划（复杂任务前置）
+
+对于 3 步以上的复杂任务，**先创建规划文件，再开始编码**：
+
+```
+task_plan.md  → 路线图（目标、阶段划分、状态跟踪）
+findings.md   → 知识库（调研发现、技术决策、资源）
+progress.md   → 执行日志（操作记录、测试结果、错误详情）
+```
+
+**为什么？** AI Agent 的上下文窗口是易失的（RAM），文件系统是持久的（磁盘）。把计划写在磁盘上，即使 `/clear` 或上下文溢出也能恢复。
+
+详见 [`principles/PLANNING_WITH_FILES.md`](./principles/PLANNING_WITH_FILES.md) —— 包含 7 条核心规则、3 次打击错误协议、5 问重启测试。
+
+---
+
 ### 1. 自然语言描述
 
 用清晰、具体的自然语言描述需求：
@@ -202,6 +218,7 @@ AI 分析需求并生成代码：
 - [ ] 包含技术栈说明
 - [ ] 有明确的约束条件
 - [ ] 描述了预期结果
+- [ ] 复杂任务已创建 `task_plan.md`、`findings.md`、`progress.md`（详见 [PLANNING_WITH_FILES.md](./principles/PLANNING_WITH_FILES.md)）
 - [ ] 分步骤迭代开发
 - [ ] 保持上下文连续
 - [ ] 每轮都测试反馈
